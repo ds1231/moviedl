@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Plyr - Media Player</title>
+    <meta name="description" property="og:description" content="Media player" />
+    <meta name="author" content="DG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Icons -->
+    <link rel="icon" href="https://cdn.plyr.io/static/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://cdn.plyr.io/static/icons/32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://cdn.plyr.io/static/icons/16x16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.plyr.io/static/icons/180x180.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Plyr Media Player" />
+    <meta property="og:site_name" content="Plyr" />
+    <meta property="og:url" content="https://plyr.io" />
+    <meta property="og:image" content="https://cdn.plyr.io/static/icons/1200x630.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@sam_potts" />
+    <meta name="twitter:creator" content="@sam_potts" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Docs styles -->
+    <link rel="stylesheet" href="./demo.css" />
+
+    <!-- Preload -->
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="https://cdn.plyr.io/static/fonts/gordita-medium.woff2" />
+    <link rel="preload" as="font" crossorigin type="font/woff2" href="https://cdn.plyr.io/static/fonts/gordita-bold.woff2" />
+
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <h1>Pl<span>a</span>y<span>e</span>r</h1>
+            <p>Media player for
+                <button type="button" class="faux-link" data-source="video">
+          <svg class="icon">
+            <title>HTML5</title>
+            <path
+              d="M14.738.326C14.548.118 14.28 0 14 0H2c-.28 0-.55.118-.738.326S.98.81 1.004 1.09l1 11c.03.317.208.603.48.767l5 3c.16.095.338.143.516.143s.356-.048.515-.143l5-3c.273-.164.452-.45.48-.767l1-11c.026-.28-.067-.557-.257-.764zM12 4H6v2h6v5.72l-4 1.334-4-1.333V9h2v1.28l2 .666 2-.667V8H4V2h8v2z">
+            </path>
+          </svg>Video</button>,
+                <button type="button" class="faux-link" data-source="audio">
+          <svg class="icon">
+            <title>HTML5</title>
+            <path
+              d="M14.738.326C14.548.118 14.28 0 14 0H2c-.28 0-.55.118-.738.326S.98.81 1.004 1.09l1 11c.03.317.208.603.48.767l5 3c.16.095.338.143.516.143s.356-.048.515-.143l5-3c.273-.164.452-.45.48-.767l1-11c.026-.28-.067-.557-.257-.764zM12 4H6v2h6v5.72l-4 1.334-4-1.333V9h2v1.28l2 .666 2-.667V8H4V2h8v2z">
+            </path>
+          </svg>Audio</button>
+                </button>
+            </p>
+        </header>
+        <main>
+            <div id="container">
+                <video controls crossorigin playsinline data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+          
+          <!-- Video files -->
+          <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4"
+            size="1080" />
+
+          <!-- Caption files -->
+          <track kind="captions" label="English" srclang="en"
+            src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
+
+          <!-- Fallback for browsers that don't support the <video> element -->
+          <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+
+        </video>
+            </div>
+
+            <ul>
+                <li class="plyr__cite plyr__cite--video" hidden>
+                    <small>&copy; DG</small>
+                </li>
+                <li class="plyr__cite plyr__cite--audio" hidden>
+                    <small>&copy; DG</small>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <aside>
+        <p>Movie Name</p>
+    </aside>
+
+    <script src="https://cdn.plyr.io/3.6.12/demo.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
